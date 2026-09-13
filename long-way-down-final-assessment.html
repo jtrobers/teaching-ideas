@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Long Way Down Final Multiple Choice Assessment | Teaching Ideas</title>
+<title>Long Way Down Final Multiple-Choice Assessment | Teaching Ideas</title>
 
 <style>
 :root{
@@ -17,11 +17,13 @@
   --line:#d8d0c4;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
   background:var(--cream);
   color:var(--ink);
   font-family:Georgia,"Times New Roman",serif;
+  line-height:1.65;
 }
 .top-strip{
   background:var(--navy-dark);
@@ -55,6 +57,11 @@ header{
   color:var(--muted);
   font-size:14px;
   font-style:italic;
+}
+nav{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
 }
 nav a{
   color:var(--ink);
@@ -91,13 +98,13 @@ nav a:hover{color:var(--rust)}
   font-weight:normal;
 }
 main{
-  max-width:1120px;
-  min-height:420px;
+  max-width:1040px;
   margin:38px auto 72px;
   padding:0 24px;
 }
 .back-link{
   display:inline-block;
+  margin-bottom:22px;
   color:var(--navy);
   text-decoration:none;
   text-transform:uppercase;
@@ -106,6 +113,27 @@ main{
   font-weight:bold;
 }
 .back-link:hover{color:var(--rust)}
+.panel{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-left:8px solid var(--rust);
+  padding:32px 36px;
+  box-shadow:0 8px 22px rgba(36,52,71,.05);
+}
+.panel h3{
+  margin:0 0 18px;
+  color:var(--navy);
+  font-size:28px;
+  font-weight:normal;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.panel p{
+  margin:0 0 18px;
+  color:var(--muted);
+  font-size:17px;
+}
+.panel p:last-child{margin-bottom:0}
 footer{
   background:var(--navy-dark);
   color:white;
@@ -118,7 +146,9 @@ footer{
 }
 @media(max-width:800px){
   header{flex-direction:column;text-align:center}
+  nav{justify-content:center}
   .hero h2{font-size:38px}
+  .panel{padding:25px}
 }
 </style>
 </head>
@@ -139,11 +169,45 @@ footer{
 
 <section class="hero">
   <div class="kicker">Classroom Assessment</div>
-  <h2><em>Long Way Down</em>: Final Multiple Choice Assessment</h2>
+  <h2><em>Long Way Down</em>: Final Multiple-Choice Assessment</h2>
 </section>
 
 <main>
-  <a class="back-link" href="index.html">← Back to Teaching Ideas</a>
+
+<a class="back-link" href="index.html">← Back to Teaching Ideas</a>
+
+<section class="panel">
+  <h3>About the Assessment</h3>
+
+  <p>
+    This assessment was created as a culminating activity for Jason Reynolds’s
+    <em>Long Way Down</em>. Rather than focusing primarily on plot recall, the questions
+    ask students to apply the reading skills practiced throughout the novel, including
+    <strong>characterization, inference, theme, symbolism, structure, author’s purpose,
+    irony, and the use of evidence to understand a text</strong>.
+  </p>
+
+  <p>
+    The assessment includes <strong>20 multiple-choice questions and one student-selected
+    short response</strong>. The multiple-choice questions use clear, accessible language
+    while still asking students to analyze the text and Reynolds’s choices as an author.
+    The short-response section gives students three options, allowing them to demonstrate
+    their understanding through application, character analysis, or theme.
+  </p>
+
+  <p>
+    The goal was to create a <strong>meaningful but accessible summative assessment</strong>
+    that measures what students understand about the novel while also reinforcing the
+    types of reading and thinking skills they will need beyond this unit.
+  </p>
+
+  <p>
+    This page includes the <strong>student assessment, answer sheet, and an explanation
+    of the thinking behind the assessment design</strong> so that other teachers can use,
+    adapt, or build from the idea.
+  </p>
+</section>
+
 </main>
 
 <footer>Teaching Ideas • Create • Try • Share</footer>
