@@ -118,6 +118,7 @@ main{
   border:1px solid var(--line);
   border-left:8px solid var(--rust);
   padding:32px 36px;
+  margin-bottom:24px;
   box-shadow:0 8px 22px rgba(36,52,71,.05);
 }
 .panel h3{
@@ -134,6 +135,45 @@ main{
   font-size:17px;
 }
 .panel p:last-child{margin-bottom:0}
+
+.resource-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin-top:22px;
+}
+.resource-card{
+  background:white;
+  border:1px solid var(--line);
+  border-top:5px solid var(--rust);
+  padding:25px;
+}
+.resource-card h4{
+  margin:0 0 10px;
+  color:var(--navy);
+  font-size:21px;
+  font-weight:normal;
+}
+.resource-card p{
+  margin:0 0 20px;
+  color:var(--muted);
+  font-size:16px;
+}
+.download-btn{
+  display:inline-block;
+  color:var(--navy);
+  text-decoration:none;
+  border:2px solid var(--rust);
+  padding:11px 16px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-size:12px;
+  font-weight:bold;
+}
+.download-btn:hover{
+  background:var(--rust);
+  color:white;
+}
 footer{
   background:var(--navy-dark);
   color:white;
@@ -149,12 +189,12 @@ footer{
   nav{justify-content:center}
   .hero h2{font-size:38px}
   .panel{padding:25px}
+  .resource-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
-
 <div class="top-strip">Create • Try • Share</div>
 
 <header>
@@ -173,12 +213,10 @@ footer{
 </section>
 
 <main>
-
 <a class="back-link" href="index.html">← Back to Teaching Ideas</a>
 
 <section class="panel">
   <h3>About the Assessment</h3>
-
   <p>
     This assessment was created as a culminating activity for Jason Reynolds’s
     <em>Long Way Down</em>. Rather than focusing primarily on plot recall, the questions
@@ -208,9 +246,44 @@ footer{
   </p>
 </section>
 
+<section class="panel">
+  <h3>Download the Materials</h3>
+  <p>
+    The classroom materials are available below. The assessment is provided as an
+    editable Word document, while the study guide and answer bubble sheet are provided
+    as a printable PDF.
+  </p>
+
+  <div class="resource-grid">
+    <div class="resource-card">
+      <h4>Final Multiple-Choice Assessment</h4>
+      <p>
+        Editable Word version of the student assessment, including the multiple-choice
+        questions and student-selected short response.
+      </p>
+      <a class="download-btn"
+         href="Long%20Way%20Down%20Test%20Git.docx"
+         download>
+        Download Word Assessment
+      </a>
+    </div>
+
+    <div class="resource-card">
+      <h4>Study Guide &amp; Answer Bubble Sheet</h4>
+      <p>
+        Printable PDF containing the student study guide and answer bubble sheet.
+      </p>
+      <a class="download-btn"
+         href="LWD%20Study%20Guide%20and%20Answer%20Bubble%20Sheet%202026.pdf"
+         download>
+        Download PDF
+      </a>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>Teaching Ideas • Create • Try • Share</footer>
-
 </body>
 </html>
