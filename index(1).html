@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Teaching ideas, lesson plans, classroom resources, and reflections from a high school English teacher." />
+<title>Teaching Ideas | Tim Robers</title>
+
+<style>
+:root{
+  --slate:#263746;
+  --slate-dark:#17232f;
+  --rust:#b65c3a;
+  --rust-dark:#8f432b;
+  --cream:#f4f0e8;
+  --paper:#fffdf8;
+  --ink:#292725;
+  --muted:#706b64;
+  --line:#d8d0c4;
+  --soft:#ebe4d8;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.65;
+}
+
+a{color:inherit;}
+
+.top-strip{
+  background:var(--slate-dark);
+  color:#f4eee6;
+  text-align:center;
+  padding:9px 18px;
+  font-size:12px;
+  letter-spacing:2.4px;
+  text-transform:uppercase;
+  border-bottom:4px solid var(--rust);
+}
+
+.site-header{
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+  padding:24px 6vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:28px;
+}
+
+.brand h1{
+  margin:0;
+  color:var(--slate);
+  font-size:34px;
+  font-weight:normal;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.brand p{
+  margin:3px 0 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+nav{
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  font-size:12px;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+nav a{
+  text-decoration:none;
+  border-bottom:2px solid transparent;
+  padding-bottom:3px;
+}
+
+nav a:hover{
+  color:var(--rust-dark);
+  border-color:var(--rust);
+}
+
+.hero{
+  background:
+    linear-gradient(90deg,rgba(23,35,47,.98),rgba(38,55,70,.91)),
+    linear-gradient(135deg,var(--slate-dark),var(--slate));
+  color:white;
+  padding:86px 7vw 82px;
+  border-bottom:8px solid var(--rust);
+}
+
+.hero-inner{
+  max-width:1120px;
+  margin:0 auto;
+}
+
+.hero-kicker{
+  margin:0 0 13px;
+  color:#e9c8ba;
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+.hero h2{
+  margin:0;
+  font-size:64px;
+  line-height:1.02;
+  letter-spacing:2px;
+  font-weight:normal;
+  text-transform:uppercase;
+}
+
+.hero .accent{color:#d8754e;}
+
+.hero p{
+  max-width:790px;
+  margin:22px 0 0;
+  color:#e9e4dc;
+  font-size:21px;
+  font-style:italic;
+}
+
+main{
+  max-width:1120px;
+  margin:42px auto 78px;
+  padding:0 24px;
+}
+
+.section{
+  margin-bottom:26px;
+}
+
+.panel{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:30px 34px;
+  box-shadow:0 8px 22px rgba(23,35,47,.05);
+}
+
+.panel-accent{
+  border-left:8px solid var(--rust);
+}
+
+.eyebrow{
+  margin:0 0 7px;
+  color:var(--rust-dark);
+  font-size:11px;
+  letter-spacing:2.6px;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+h2.section-title{
+  margin:0 0 14px;
+  color:var(--slate);
+  font-size:30px;
+  font-weight:normal;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.panel p{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:17px;
+}
+
+.panel p:last-child{margin-bottom:0;}
+
+.divider{
+  height:1px;
+  background:var(--line);
+  margin:25px 0;
+}
+
+.lesson-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+
+.lesson-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-top:6px solid var(--rust);
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  box-shadow:0 7px 18px rgba(23,35,47,.04);
+}
+
+.lesson-number{
+  color:var(--rust-dark);
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:bold;
+  margin-bottom:7px;
+}
+
+.lesson-card h3{
+  margin:0 0 11px;
+  color:var(--slate);
+  font-size:24px;
+  font-weight:normal;
+  line-height:1.22;
+}
+
+.lesson-card p{
+  margin:0 0 20px;
+  color:var(--muted);
+  font-size:16px;
+}
+
+.lesson-card .spacer{flex:1;}
+
+.btn{
+  display:inline-block;
+  align-self:flex-start;
+  color:var(--slate-dark);
+  text-decoration:none;
+  border:2px solid var(--rust);
+  padding:10px 15px;
+  text-transform:uppercase;
+  letter-spacing:1.6px;
+  font-size:11px;
+  font-weight:bold;
+  background:#fff;
+}
+
+.btn:hover{
+  background:var(--rust);
+  color:white;
+}
+
+.note-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+
+.note{
+  border:1px solid var(--line);
+  background:#fff;
+  padding:20px;
+}
+
+.note h3{
+  margin:0 0 8px;
+  color:var(--slate);
+  font-size:18px;
+  font-weight:normal;
+}
+
+.note p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+}
+
+footer{
+  background:var(--slate-dark);
+  color:#eee8df;
+  text-align:center;
+  padding:28px 20px;
+  border-top:6px solid var(--rust);
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+footer span{color:#d99272;}
+
+@media(max-width:820px){
+  .site-header{
+    flex-direction:column;
+    text-align:center;
+  }
+  nav{justify-content:center;}
+  .hero{padding:64px 26px;}
+  .hero h2{font-size:43px;}
+  .lesson-grid,.note-grid{grid-template-columns:1fr;}
+  .brand h1{font-size:28px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-strip">Teaching • Trying • Rethinking</div>
+
+<header class="site-header">
+  <div class="brand">
+    <h1>Teaching Ideas</h1>
+    <p>Lessons, resources, and reflections from the classroom</p>
+  </div>
+
+  <nav aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="#lessons">Lessons &amp; Ideas</a>
+    <a href="#approach">Approach</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-kicker">Classroom-tested ideas for English teachers</p>
+    <h2>
+      Teaching.<br>
+      <span class="accent">Trying.</span><br>
+      <span class="accent">Rethinking.</span>
+    </h2>
+    <p>
+      Practical classroom ideas, lessons, resources, and reflections from a high school English teacher.
+    </p>
+  </div>
+</section>
+
+<main>
+
+  <section class="section panel panel-accent" id="about">
+    <p class="eyebrow">Welcome</p>
+    <h2 class="section-title">A Place to Share the Work</h2>
+
+    <p>
+      Teaching is a constant process of trying something, seeing what happens, and deciding what to keep, revise, or rethink.
+    </p>
+
+    <p>
+      This site is a place for me to share lessons, activities, resources, and ideas that have grown out of real classroom planning and instruction. Some are things that worked well. Others are still developing.
+    </p>
+
+    <p>
+      The goal is not to present one perfect way to teach something. It is to share materials and thinking that another teacher might be able to use, adapt, question, or improve for their own students.
+    </p>
+  </section>
+
+  <section class="section" id="lessons">
+    <div class="panel">
+      <p class="eyebrow">Start Here</p>
+      <h2 class="section-title">Lessons &amp; Ideas</h2>
+      <p>
+        Each lesson page includes the idea behind the activity, how I used it in class, student-facing materials when available, and reflections on what worked or what I would change.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="lesson-grid">
+        <article class="lesson-card">
+          <div class="lesson-number">Lesson 01</div>
+          <h3>Teaching <em>Long Way Down</em>: The Elevator Investigation</h3>
+          <p>
+            A paper-based approach to Jason Reynolds' novel that turns each elevator floor into an investigation. Students collect evidence, analyze character and perspective, examine author's craft, and build toward a final elevator report.
+          </p>
+          <div class="spacer"></div>
+          <a class="btn" href="long-way-down.html">Explore the Lesson</a>
+        </article>
+
+        <article class="lesson-card">
+          <div class="lesson-number">More to Come</div>
+          <h3>Classroom Ideas in Progress</h3>
+          <p>
+            Additional lessons, short activities, writing supports, discussion strategies, and reflections will be added as the site grows.
+          </p>
+          <div class="spacer"></div>
+          <span class="btn" style="opacity:.55;cursor:default;">Coming Soon</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section panel" id="approach">
+    <p class="eyebrow">How I Think About Sharing</p>
+    <h2 class="section-title">Use It. Change It. Make It Yours.</h2>
+
+    <div class="note-grid">
+      <div class="note">
+        <h3>Built for Real Classrooms</h3>
+        <p>These ideas come from actual classroom planning, instruction, revisions, and student response—not from a polished curriculum package.</p>
+      </div>
+
+      <div class="note">
+        <h3>Adaptation Is Expected</h3>
+        <p>Different students need different entry points. Take what works, change what does not, and adjust the lesson to fit your classroom.</p>
+      </div>
+
+      <div class="note">
+        <h3>Reflection Matters</h3>
+        <p>I want to share not only the finished material, but also why I tried it, what happened, and what I would do differently next time.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>Teaching Ideas</span> • Lessons • Resources • Reflection
+</footer>
+
+</body>
+</html>
